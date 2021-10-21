@@ -1,5 +1,6 @@
 export default {
   screensBgColor: "#E9E9E9",
+  screens2ndBgColor: "#303030",
   statusBarBgColor: "#E9E9E9",
   textColor: "#404040",
   inputBg: "#D2D2D2",

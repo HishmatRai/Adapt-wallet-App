@@ -5,8 +5,11 @@ import {
   StyleSheet,
   StatusBar,
   TouchableOpacity,
+  Image,
+  ScrollView,
 } from "react-native";
 import ThemeColors from "./../../theme/colors";
+import { Ionicons } from "@expo/vector-icons";
 import {
   WalletActiveIcon,
   AdaptIcon,
@@ -24,9 +27,34 @@ function Wallet(props) {
         backgroundColor={ThemeColors.statusBarBgColor}
         translucent={false}
       />
-      <View>
-          
+      <View style={style._header_main}>
+        <View style={style._header_section}>
+          <Image
+            source={require("./../../img/Profile.jpg")}
+            style={style._profile_Image}
+          />
+          <Text style={style._name}>Adam Smith</Text>
+        </View>
+        <View style={style._header_section}>
+          <TouchableOpacity style={{ marginRight: 20 }}>
+            <Ionicons
+              name="ios-notifications-outline"
+              size={24}
+              color="white"
+            />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Ionicons name="settings" size={24} color="white" />
+          </TouchableOpacity>
+        </View>
       </View>
+
+      <ScrollView style={{ paddingHorizontal: 20 }}>
+        <Text style={style._main_title}>Portfolio Balance</Text>
+        <View>
+          <Text>$12550.50</Text>
+        </View>
+      </ScrollView>
 
       <View style={style._tabs}>
         <TouchableOpacity style={style.tab_btn}>
@@ -75,7 +103,7 @@ function Wallet(props) {
 const style = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: ThemeColors.screensBgColor,
+    backgroundColor: ThemeColors.screens2ndBgColor,
   },
   _tabs: {
     flexDirection: "row",
@@ -98,6 +126,34 @@ const style = StyleSheet.create({
   },
   tab_btn: {
     alignItems: "center",
+  },
+  _header_main: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    margin: 20,
+  },
+
+  _profile_Image: {
+    width: 40,
+    height: 40,
+    borderRadius: 10,
+  },
+  _header_section: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  _name: {
+    color: "white",
+    fontFamily: "Roboto-Regular",
+    fontSize: 14,
+    marginLeft: 20,
+  },
+  _main_title: {
+    color: "white",
+    fontFamily: "Roboto-Regular",
+    fontSize: 14,
   },
 });
 
