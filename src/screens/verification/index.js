@@ -10,6 +10,7 @@ import {
 import { OtpImage } from "./../../components/svg";
 import ThemeColors from "./../../theme/colors";
 import Otp from "../../components/otp";
+import { Ionicons } from "@expo/vector-icons";
 function Verification(props) {
   return (
     <View style={style.container}>
@@ -24,6 +25,7 @@ function Verification(props) {
           style={style._header_mani}
           onPress={() => props.navigation.goBack()}
         >
+           <Ionicons name="chevron-back" size={24} color="#404040" />
           <Text style={style._header}>Verification</Text>
         </TouchableOpacity>
       </View>

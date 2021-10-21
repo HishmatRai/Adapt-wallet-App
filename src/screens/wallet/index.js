@@ -18,6 +18,7 @@ import {
   ContactsIcon,
   ProfileIcon,
 } from "./../../components/svg";
+import ChartSlider from "../../components/chartslider";
 function Wallet(props) {
   return (
     <View style={style.container}>
@@ -50,10 +51,13 @@ function Wallet(props) {
       </View>
 
       <ScrollView style={{ paddingHorizontal: 20 }}>
+        <View>
         <Text style={style._main_title}>Portfolio Balance</Text>
         <View>
           <Text>$12550.50</Text>
         </View>
+          <ChartSlider />
+          </View>
       </ScrollView>
 
       <View style={style._tabs}>

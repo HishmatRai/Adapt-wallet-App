@@ -5,7 +5,12 @@ import {
   Signup,
   SignIn,
   Verification,
-  Wallet
+  Wallet,
+  Contacts,
+  Profile,
+  Receive,
+  Setting,
+  Chat
 } from './../../screens'
 const Stack = createNativeStackNavigator();
 function Navigation(props) {
@@ -15,7 +20,12 @@ function Navigation(props) {
         {/* <Stack.Screen name="Signup" component={Signup} options={{ headerShown: false }} />
         <Stack.Screen name="SignIn" component={SignIn} options={{ headerShown: false }} /> */}
         {/* <Stack.Screen name="Verification" component={Verification} options={{ headerShown: false }} /> */}
-        <Stack.Screen name="Wallet" component={Wallet} options={{ headerShown: false }} />
+        {/* <Stack.Screen name="Wallet" component={Wallet} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="Contacts" component={Contacts} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="Receive" component={Receive} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="Setting" component={Setting} options={{ headerShown: false }} /> */}
+        <Stack.Screen name="Chat" component={Chat} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
