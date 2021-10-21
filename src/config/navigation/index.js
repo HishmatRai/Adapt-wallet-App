@@ -10,7 +10,12 @@ import {
   Profile,
   Receive,
   Setting,
-  Chat
+  Chat,
+  Transfer,
+  SuccessMessage,
+  Inbox,
+  Notification,
+  Balance
 } from './../../screens'
 const Stack = createNativeStackNavigator();
 function Navigation(props) {
@@ -25,7 +30,12 @@ function Navigation(props) {
         {/* <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} /> */}
         {/* <Stack.Screen name="Receive" component={Receive} options={{ headerShown: false }} /> */}
         {/* <Stack.Screen name="Setting" component={Setting} options={{ headerShown: false }} /> */}
-        <Stack.Screen name="Chat" component={Chat} options={{ headerShown: false }} />
+        {/* <Stack.Screen name="Chat" component={Chat} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="Transfer" component={Transfer} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="SuccessMessage" component={SuccessMessage} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="Inbox" component={Inbox} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="Notification" component={Notification} options={{ headerShown: false }} /> */}
+        <Stack.Screen name="Balance" component={Balance} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

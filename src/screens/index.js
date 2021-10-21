@@ -6,7 +6,12 @@ import Contacts from "./contacts";
 import Profile from "./profile";
 import Receive from './receive';
 import Setting from "./setting";
-import Chat from './chat'
+import Chat from './chat';
+import Transfer from './transfer';
+import SuccessMessage from './successmessage';
+import Inbox from "./inbox";
+import Notification from "./notification";
+import Balance from "./balance";
 export{
     Signup,
     SignIn,
@@ -16,5 +21,10 @@ export{
     Profile,
     Receive,
     Setting,
-    Chat
+    Chat,
+    Transfer,
+    SuccessMessage,
+    Inbox,
+    Notification,
+    Balance
 }
