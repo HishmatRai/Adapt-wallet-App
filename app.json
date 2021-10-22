@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Adapt wallet",
-    "slug": "Adapt wallet",
+    "name": "AdaptWallet",
+    "slug": "AdaptWallet",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -29,7 +29,7 @@
       "favicon": "./assets/favicon.png"
     },
     "android": {
-      "package": "com.Adapt wallet.Adapt wallet",
+      "package": "com.AdaptWallet.AdaptWallet",
       "versionCode": 1
     }
   }
