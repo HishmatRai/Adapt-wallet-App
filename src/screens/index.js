@@ -11,7 +11,8 @@ import Transfer from './transfer';
 import SuccessMessage from './successmessage';
 import Inbox from "./inbox";
 import Notification from "./notification";
-import Balance from "./balance";
+import Balance from "./balance";;
+import PriceChart from './pricechart'
 export{
     Signup,
     SignIn,
@@ -26,5 +27,6 @@ export{
     SuccessMessage,
     Inbox,
     Notification,
-    Balance
+    Balance,
+    PriceChart
 }

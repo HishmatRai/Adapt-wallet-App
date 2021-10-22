@@ -15,7 +15,8 @@ import {
   SuccessMessage,
   Inbox,
   Notification,
-  Balance
+  Balance,
+  PriceChart
 } from './../../screens'
 const Stack = createNativeStackNavigator();
 function Navigation(props) {
@@ -26,6 +27,7 @@ function Navigation(props) {
         <Stack.Screen name="SignIn" component={SignIn} options={{ headerShown: false }} /> */}
         {/* <Stack.Screen name="Verification" component={Verification} options={{ headerShown: false }} /> */}
         {/* <Stack.Screen name="Wallet" component={Wallet} options={{ headerShown: false }} /> */}
+        <Stack.Screen name="PriceChart" component={PriceChart} options={{ headerShown: false }} />
         {/* <Stack.Screen name="Contacts" component={Contacts} options={{ headerShown: false }} /> */}
         {/* <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} /> */}
         {/* <Stack.Screen name="Receive" component={Receive} options={{ headerShown: false }} /> */}
@@ -35,7 +37,7 @@ function Navigation(props) {
         {/* <Stack.Screen name="SuccessMessage" component={SuccessMessage} options={{ headerShown: false }} /> */}
         {/* <Stack.Screen name="Inbox" component={Inbox} options={{ headerShown: false }} /> */}
         {/* <Stack.Screen name="Notification" component={Notification} options={{ headerShown: false }} /> */}
-        <Stack.Screen name="Balance" component={Balance} options={{ headerShown: false }} />
+        {/* <Stack.Screen name="Balance" component={Balance} options={{ headerShown: false }} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

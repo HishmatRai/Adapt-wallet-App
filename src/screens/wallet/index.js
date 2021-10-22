@@ -9,7 +9,7 @@ import {
   ScrollView,
 } from "react-native";
 import ThemeColors from "./../../theme/colors";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, FontAwesome } from "@expo/vector-icons";
 import {
   WalletActiveIcon,
   AdaptIcon,
@@ -52,12 +52,28 @@ function Wallet(props) {
 
       <ScrollView style={{ paddingHorizontal: 20 }}>
         <View>
-        <Text style={style._main_title}>Portfolio Balance</Text>
-        <View>
-          <Text>$12550.50</Text>
-        </View>
-          <ChartSlider />
+          <Text style={style._main_title}>Portfolio Balance</Text>
+          <View style={style._header_price_main}>
+            <Text style={style._price}>$12550.50</Text>
+            <TouchableOpacity style={style._persentage_btn}>
+              <FontAwesome
+                name="sort-down"
+                size={20}
+                color="#04DC00"
+                style={{ marginTop: -5 }}
+              />
+              <Text style={style._persentage}>10.75%</Text>
+            </TouchableOpacity>
           </View>
+          <View style={style._portfolio_main}>
+            <Text style={style._portfolio}>My Portfolio</Text>
+            <TouchableOpacity style={style._month_btn}>
+              <Text style={style._month}>Monthly</Text>
+              <FontAwesome name="angle-down" size={20} color="#00F4C8" />
+            </TouchableOpacity>
+          </View>
+          {/* <ChartSlider /> */}
+        </View>
       </ScrollView>
 
       <View style={style._tabs}>
@@ -158,6 +174,52 @@ const style = StyleSheet.create({
     color: "white",
     fontFamily: "Roboto-Regular",
     fontSize: 14,
+  },
+  _header_price_main: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  _price: {
+    color: "white",
+    fontFamily: "Roboto-Bold",
+    fontSize: 34,
+  },
+  _persentage_btn: {
+    backgroundColor: "#012500",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    height: 35,
+    borderRadius: 50,
+    paddingHorizontal: 20,
+  },
+  _persentage: {
+    color: "#04DC00",
+    fontSize: 11,
+    fontFamily: "Roboto-Regular",
+    marginLeft: 10,
+  },
+  _portfolio_main: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginTop:20
+  },
+  _portfolio: {
+    color: "#fff",
+    fontSize: 14,
+    fontFamily: "Roboto-Regular",
+  },
+  _month_btn: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  _month: {
+    color: "#00F4C8",
+    marginRight: 5,
+    fontFamily: "Roboto-Regular",
+    fontSize: 13,
   },
 });
 

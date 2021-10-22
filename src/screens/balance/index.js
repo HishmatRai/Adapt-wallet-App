@@ -8,9 +8,40 @@ import {
   ScrollView,
   Image,
 } from "react-native";
+import { EthIcon, OgdIcon, BtcIcon, LtcIcon } from "./../../components/svg";
 import ThemeColors from "./../../theme/colors";
 import { Ionicons, Entypo } from "@expo/vector-icons";
 function Balance(props) {
+  let CardData = [
+    {
+      logo: <EthIcon />,
+      title: "0xf1…d09d",
+      tag: "Mainnet",
+      type: "12.482 ETH",
+      price: "$51.97",
+    },
+    {
+      logo: <OgdIcon />,
+      title: "0xb5 … 79x2",
+      tag: "Ropsten testnet",
+      type: "38245.12 OGD",
+      price: "$215.25",
+    },
+    {
+      logo: <BtcIcon />,
+      title: "0x5о … N7h9",
+      tag: "Mainnet",
+      type: "326.12 BTC",
+      price: "$83.58",
+    },
+    {
+      logo: <LtcIcon />,
+      title: "0xb5 … 79x2",
+      tag: "Ropsten testnet",
+      type: "38245.12 LTC",
+      price: "$77.15",
+    },
+  ];
   return (
     <View style={style.container}>
       <StatusBar
@@ -57,13 +88,36 @@ function Balance(props) {
         </View>
       </View>
 
-      <ScrollView showsVerticalScrollIndicator={false}>
-          <View>
-              <TouchableOpacity>
-                  
+      <View style={{ marginTop: -30 }}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          {CardData.map((v, i) => {
+            return (
+              <TouchableOpacity style={style._card_main} key={i}>
+                <View style={style._card_logo_main}>
+                  {v.logo}
+                  <View style={{ marginLeft: 10 }}>
+                    <Text style={style._btn_title}>{v.title}</Text>
+                    <Text style={style._btn_detail}>{v.tag}</Text>
+                  </View>
+                </View>
+                <View style={{ alignSelf: "flex-end", alignItems: "flex-end" }}>
+                  <Text style={style._btn_title}>{v.type}</Text>
+                  <Text style={style._btn_detail}>{v.price} </Text>
+                </View>
               </TouchableOpacity>
-          </View>
-      </ScrollView>
+            );
+          })}
+          <TouchableOpacity style={style.add_balance_btn}>
+            <View style={style._add_icon_main}>
+              <Ionicons name="ios-add-outline" size={24} color="#20273D" />
+            </View>
+            <View>
+              <Text style={style._btn_title}>Add token</Text>
+              <Text style={style._btn_detail}>Bitcoin, Cashcoin, Monero..</Text>
+            </View>
+          </TouchableOpacity>
+        </ScrollView>
+      </View>
     </View>
   );
 }
@@ -147,6 +201,49 @@ const style = StyleSheet.create({
     fontSize: 15,
     color: "#F7F7F7",
     fontFamily: "Roboto-Regular",
+  },
+  add_balance_btn: {
+    backgroundColor: "white",
+    borderRadius: 5,
+    paddingVertical: 20,
+    marginHorizontal: 20,
+    paddingHorizontal: 20,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  _add_icon_main: {
+    width: 40,
+    height: 40,
+    backgroundColor: "#EFF1F5",
+    borderRadius: 40 / 2,
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: 10,
+  },
+  _btn_title: {
+    fontSize: 16,
+    color: "#151724",
+    fontFamily: "Roboto-Regular",
+  },
+  _btn_detail: {
+    fontSize: 16,
+    color: "#B8B9BD",
+    fontFamily: "Roboto-Regular",
+  },
+  _card_main: {
+    backgroundColor: "white",
+    borderRadius: 5,
+    paddingVertical: 20,
+    marginHorizontal: 20,
+    paddingHorizontal: 20,
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 10,
+    justifyContent: "space-between",
+  },
+  _card_logo_main: {
+    flexDirection: "row",
+    alignItems: "center",
   },
 });
 
