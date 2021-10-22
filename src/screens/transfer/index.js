@@ -42,16 +42,16 @@ function Transfer(props) {
           <Text style={style._header}>Transfer</Text>
         </TouchableOpacity>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => props.navigation.navigate("Profile")}>
             <Image
               source={require("./../../img/Profile.jpg")}
               style={style._profile_Image}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={{ marginHorizontal: 15 }}>
+          <TouchableOpacity style={{ marginHorizontal: 15 }} onPress={() => props.navigation.navigate("Setting")}>
             <Ionicons name="settings-sharp" size={24} color="#002137" />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => props.navigation.navigate("Notification")}>
             <Ionicons name="notifications-sharp" size={24} color="#002137" />
           </TouchableOpacity>
         </View>
@@ -141,10 +141,10 @@ function Transfer(props) {
         </View>
 
         <View style={style._btns_main}>
-          <TouchableOpacity style={style._trasfer_btn}>
+          <TouchableOpacity style={style._trasfer_btn} onPress={() => props.navigation.navigate("SuccessMessage")}>
             <Text style={style._trasfer_btn_text}>Transfer</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={style._cancel_btn}>
+          <TouchableOpacity style={style._cancel_btn}  onPress={() => props.navigation.goBack()}>
             <Text style={style._cancel_btn_text}>Cancel</Text>
           </TouchableOpacity>
         </View>

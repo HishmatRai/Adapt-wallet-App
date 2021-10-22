@@ -85,7 +85,7 @@ function Notification(props) {
             <TouchableOpacity style={style._tabs_btn}>
               <Text style={style._notificaion_Tab}>Notifications</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={style._tabs_btn}>
+            <TouchableOpacity style={style._tabs_btn}  onPress={() => props.navigation.navigate("Inbox")}>
               <Text style={style._inbox}>Inbox</Text>
             </TouchableOpacity>
           </View>

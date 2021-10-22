@@ -159,7 +159,7 @@ function Profile(props) {
         </ScrollView>
       </View>
       <View style={style._tabs}>
-        <TouchableOpacity style={style.tab_btn}>
+        <TouchableOpacity style={style.tab_btn} onPress={() => props.navigation.navigate("Wallet")}>
           <WalletIcon />
           <Text style={[style.tabs_Text, { color: ThemeColors.tabColor }]}>
             Wallet
@@ -177,19 +177,19 @@ function Profile(props) {
             Browser
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={style.tab_btn}>
+        <TouchableOpacity style={style.tab_btn} onPress={() => props.navigation.navigate("Receive")}>
           <ReceiveIcon />
           <Text style={[style.tabs_Text, { color: ThemeColors.tabColor }]}>
             Receive
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={style.tab_btn}>
+        <TouchableOpacity style={style.tab_btn} onPress={() => props.navigation.navigate("Contacts")}>
           <ContactsIcon />
           <Text style={[style.tabs_Text, { color: ThemeColors.tabColor }]}>
             Contacts
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={style.tab_btn}>
+        <TouchableOpacity style={style.tab_btn}  onPress={() => props.navigation.navigate("Profile")}>
           <ProfileActiveIcon />
           <Text
             style={[style.tabs_Text, { color: ThemeColors.activeTabColor }]}

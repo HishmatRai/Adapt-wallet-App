@@ -92,7 +92,7 @@ function Balance(props) {
         <ScrollView showsVerticalScrollIndicator={false}>
           {CardData.map((v, i) => {
             return (
-              <TouchableOpacity style={style._card_main} key={i}>
+              <TouchableOpacity style={style._card_main} key={i}  onPress={() => props.navigation.navigate("Transfer")}>
                 <View style={style._card_logo_main}>
                   {v.logo}
                   <View style={{ marginLeft: 10 }}>

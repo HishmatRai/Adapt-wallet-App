@@ -79,7 +79,7 @@ function Inbox(props) {
         <View style={style._chat_main}>
           {ChatList.map((v, i) => {
             return (
-              <View style={style._card_main} key={i}>
+              <TouchableOpacity style={style._card_main} key={i}  onPress={() => props.navigation.navigate("Chat")}>
                 <View style={style._card_1_section}>
                   <Image
                     source={require("./../../img/Profile.jpg")}
@@ -102,7 +102,7 @@ function Inbox(props) {
                     </>
                   ) : null}
                 </View>
-              </View>
+              </TouchableOpacity>
             );
           })}
         </View>

@@ -157,7 +157,7 @@ function Contacts(props) {
       </View>
 
       <View style={style._tabs}>
-        <TouchableOpacity style={style.tab_btn}>
+        <TouchableOpacity style={style.tab_btn} onPress={() => props.navigation.navigate("Wallet")}>
           <WalletIcon />
           <Text style={[style.tabs_Text, { color: ThemeColors.tabColor }]}>
             Wallet
@@ -175,13 +175,13 @@ function Contacts(props) {
             Browser
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={style.tab_btn}>
+        <TouchableOpacity style={style.tab_btn} onPress={() => props.navigation.navigate("Receive")}>
           <ReceiveIcon />
           <Text style={[style.tabs_Text, { color: ThemeColors.tabColor }]}>
             Receive
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={style.tab_btn}>
+        <TouchableOpacity style={style.tab_btn} onPress={() => props.navigation.navigate("Contacts")}>
           <ContactsActiveIcon />
           <Text
             style={[style.tabs_Text, { color: ThemeColors.activeTabColor }]}
@@ -189,7 +189,7 @@ function Contacts(props) {
             Contacts
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={style.tab_btn}>
+        <TouchableOpacity style={style.tab_btn} onPress={() => props.navigation.navigate("Profile")}>
           <ProfileIcon />
           <Text style={[style.tabs_Text, { color: ThemeColors.tabColor }]}>
             Profile

@@ -122,16 +122,16 @@ function Receive(props) {
           <Text style={style._header}>Transaction</Text>
         </TouchableOpacity>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => props.navigation.navigate("Profile")}>
             <Image
               source={require("./../../img/Profile.jpg")}
               style={style._profile_Image}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={{ marginHorizontal: 15 }}>
+          <TouchableOpacity style={{ marginHorizontal: 15 }} onPress={() => props.navigation.navigate("Setting")}>
             <Ionicons name="settings-sharp" size={24} color="#002137" />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => props.navigation.navigate("Notification")}>
             <Ionicons name="notifications-sharp" size={24} color="#002137" />
           </TouchableOpacity>
         </View>
@@ -162,7 +162,7 @@ function Receive(props) {
       <ScrollView showsVerticalScrollIndicator={false}>
         {CardData.map((v, i) => {
           return (
-            <View key={i} style={style._card_main}>
+            <TouchableOpacity key={i} style={style._card_main} onPress={() => props.navigation.navigate("Balance")}>
               <View style={style._card_1_portion}>
                 <Image
                   source={v.profileImg}
@@ -185,12 +185,12 @@ function Receive(props) {
               <View style={style._card_3_portion}>
                 <Text style={style._price}>{v.price}</Text>
               </View>
-            </View>
+            </TouchableOpacity>
           );
         })}
       </ScrollView>
       <View style={style._tabs}>
-        <TouchableOpacity style={style.tab_btn}>
+        <TouchableOpacity style={style.tab_btn} onPress={() => props.navigation.navigate("Wallet")}>
           <WalletIcon />
           <Text style={[style.tabs_Text, { color: ThemeColors.tabColor }]}>
             Wallet
@@ -208,7 +208,7 @@ function Receive(props) {
             Browser
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={style.tab_btn}>
+        <TouchableOpacity style={style.tab_btn} onPress={() => props.navigation.navigate("Receive")}>
           <ReceiveActiveIcon />
           <Text
             style={[style.tabs_Text, { color: ThemeColors.activeTabColor }]}
@@ -216,13 +216,13 @@ function Receive(props) {
             Receive
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={style.tab_btn}>
+        <TouchableOpacity style={style.tab_btn} onPress={() => props.navigation.navigate("Contacts")}>
           <ContactsIcon />
           <Text style={[style.tabs_Text, { color: ThemeColors.tabColor }]}>
             Contacts
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={style.tab_btn}>
+        <TouchableOpacity style={style.tab_btn} onPress={() => props.navigation.navigate("Profile")}>
           <ProfileIcon />
           <Text style={[style.tabs_Text, { color: ThemeColors.tabColor }]}>
             Profile

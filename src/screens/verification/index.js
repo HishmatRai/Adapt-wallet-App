@@ -42,7 +42,7 @@ function Verification(props) {
         </TouchableOpacity>
         <TouchableOpacity
           style={style._signup_btn}
-          //   onPress={() => props.navigation.navigate("Verification")}
+            onPress={() => props.navigation.navigate("Wallet")}
         >
           <Text style={style._signup_btn_text}>Verify</Text>
         </TouchableOpacity>

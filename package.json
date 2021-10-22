@@ -13,6 +13,7 @@
     "@chartiful/react-native-vertical-bar-graph": "^0.1.2",
     "@react-navigation/native": "^6.0.4",
     "@react-navigation/native-stack": "^6.2.2",
+    "d3-shape": "^3.0.1",
     "expo": "~42.0.1",
     "expo-app-loading": "^1.1.2",
     "expo-font": "~9.2.1",
@@ -27,6 +28,7 @@
     "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "~3.4.0",
     "react-native-svg": "^12.1.1",
+    "react-native-svg-charts": "^5.4.0",
     "react-native-web": "~0.13.12",
     "toggle-switch-react-native": "^3.2.0"
   },

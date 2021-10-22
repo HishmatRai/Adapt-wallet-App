@@ -28,7 +28,7 @@ function SuccessMessage(props) {
             receipt. {"\n"}Thank you for using our service.
           </Text>
         </View>
-        <TouchableOpacity style={style._contine_btn}>
+        <TouchableOpacity style={style._contine_btn} onPress={() => props.navigation.navigate("Wallet")}>
           <Text style={style._contine_btn_text}>Continue</Text>
         </TouchableOpacity>
       </View>

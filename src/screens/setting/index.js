@@ -45,7 +45,7 @@ function Setting(props) {
           <Ionicons name="chevron-back" size={24} color="#29304D" />
           <Text style={style._header}>Setting</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity  onPress={() => props.navigation.navigate("Profile")}>
           <Image
             source={require("./../../img/Profile.jpg")}
             style={style._profile_Image}
@@ -120,7 +120,7 @@ function Setting(props) {
             <Text style={style._card_title}>Account Setting</Text>
           </View>
           <View style={style._card_2_section}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate("Profile")}>
               <Text style={style._language}>Edit</Text>
             </TouchableOpacity>
           </View>
