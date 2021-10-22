@@ -27,6 +27,10 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "android": {
+      "package": "com.Adapt wallet.Adapt wallet",
+      "versionCode": 1
     }
   }
 }

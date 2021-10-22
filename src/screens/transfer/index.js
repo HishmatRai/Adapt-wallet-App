@@ -42,16 +42,23 @@ function Transfer(props) {
           <Text style={style._header}>Transfer</Text>
         </TouchableOpacity>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
-          <TouchableOpacity onPress={() => props.navigation.navigate("Profile")}>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate("Profile")}
+          >
             <Image
               source={require("./../../img/Profile.jpg")}
               style={style._profile_Image}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={{ marginHorizontal: 15 }} onPress={() => props.navigation.navigate("Setting")}>
+          <TouchableOpacity
+            style={{ marginHorizontal: 15 }}
+            onPress={() => props.navigation.navigate("Setting")}
+          >
             <Ionicons name="settings-sharp" size={24} color="#002137" />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => props.navigation.navigate("Notification")}>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate("Notification")}
+          >
             <Ionicons name="notifications-sharp" size={24} color="#002137" />
           </TouchableOpacity>
         </View>
@@ -63,7 +70,13 @@ function Transfer(props) {
           How much you would like to Transfer?
         </Text>
         <View style={style._price_card_man}>
-          <Text style={style._price}>$7,000</Text>
+          <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
+            <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
+              <Text style={style._card_title}>BTC </Text>
+              <Text style={style._card_title}> 326.12</Text>
+            </View>
+            <Text style={style._price}>$7,000</Text>
+          </View>
           <Text style={style._card_title}>Quick Actions</Text>
           <View style={style._price_btn_main}>
             {cardPrice.map((v, i) => {
@@ -141,10 +154,16 @@ function Transfer(props) {
         </View>
 
         <View style={style._btns_main}>
-          <TouchableOpacity style={style._trasfer_btn} onPress={() => props.navigation.navigate("SuccessMessage")}>
+          <TouchableOpacity
+            style={style._trasfer_btn}
+            onPress={() => props.navigation.navigate("SuccessMessage")}
+          >
             <Text style={style._trasfer_btn_text}>Transfer</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={style._cancel_btn}  onPress={() => props.navigation.goBack()}>
+          <TouchableOpacity
+            style={style._cancel_btn}
+            onPress={() => props.navigation.goBack()}
+          >
             <Text style={style._cancel_btn_text}>Cancel</Text>
           </TouchableOpacity>
         </View>
